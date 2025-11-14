@@ -1,0 +1,45 @@
+version: 2
+
+project_name: snake
+
+builds:
+  - id: snake
+    main: .
+    binary: snake
+    targets:
+      - linux_amd64
+      - linux_arm64
+      - darwin_amd64
+      - darwin_arm64
+    ldflags:
+      - "-s -w"
+
+archives:
+  - id: snake-archive
+    formats: [tar.gz]
+    files:
+      - LICENSE
+      - README.md
+
+brews:
+  - name: snake
+    repository:
+      owner: Mehulparekh144
+      name: homebrew-tap
+    commit_author:
+      name: Mehul Parekh
+      email: you@example.com
+    description: "A terminal-based Snake game written in Go"
+    homepage: "https://github.com/Mehulparekh144/go-snake"
+    license: "MIT"
+    install: |
+      bin.install "snake"
+
+checksum:
+  name_template: "checksums.txt"
+
+release:
+  github:
+    owner: Mehulparekh144
+    name: go-snake
+  draft: false
