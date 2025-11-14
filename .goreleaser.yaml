@@ -4,7 +4,7 @@ project_name: snake
 
 builds:
   - id: snake
-    main: .
+    main: ./cmd
     binary: snake
     targets:
       - linux_amd64
