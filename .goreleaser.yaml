@@ -8,9 +8,7 @@ builds:
     binary: snake
     targets:
       - snake_Linux_amd64
-      - snake_Linux_x86_64
       - snake_Darwin_amd64
-      - snake_Darwin_x86_64
     ldflags:
       - "-s -w"
 
