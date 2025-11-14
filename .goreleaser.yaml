@@ -7,10 +7,10 @@ builds:
     main: ./cmd
     binary: snake
     targets:
-      - linux_amd64
-      - linux_arm64
-      - darwin_amd64
-      - darwin_arm64
+      - snake_Linux_amd64
+      - snake_Linux_x86_64
+      - snake_Darwin_amd64
+      - snake_Darwin_x86_64
     ldflags:
       - "-s -w"
 
